@@ -34,8 +34,7 @@ The Supabase client code in `services` has been provided for you. You need to co
 
 #### Routes
 
-- Sign in
-- Sign up
+- Only one / which will have both sign in and sign up
 
 #### SignIn - views
 
