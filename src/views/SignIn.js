@@ -20,7 +20,7 @@ export default function SignIn() {
 
   return (
     <div>
-      <h1>Hello, welcome to sign up</h1>
+      <h1>Hello, welcome to sign in</h1>
       <AuthForm
         handleSubmit={handleSubmit}
         email={email}
