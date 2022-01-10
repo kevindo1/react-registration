@@ -1,4 +1,5 @@
 # Half Baked Registration
+
 Use [this template](https://github.com/alchemycodelab/react-half-baked-registration) and your own supabase database for this app.
 
 ### Learning Objectives
@@ -30,3 +31,24 @@ The Supabase client code in `services` has been provided for you. You need to co
 | Routes properly check for authenticated user | 3      |
 | Authenticated users can log out              | 2      |
 | Authenticated users see something else       | 2      |
+
+#### Routes
+
+- Sign in
+- Sign up
+
+#### SignIn - views
+
+- useState for email and password
+
+#### SignUp - views
+
+- useState for email and password
+
+#### Components
+
+- input form with email, password, submit button (handleSubmit)
+
+#### Props
+
+- email, password, eventHandler
