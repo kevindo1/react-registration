@@ -13,17 +13,25 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>Login</h1>
+      <h1>Welcome</h1>
       <BrowserRouter>
         <header>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/"></NavLink>
         </header>
         <Switch>
           <Route exact path="/">
             {currentUser && (
               <>
-                <h2>Signed In</h2>
-                <button onClick={logOutUser}>Log Out</button>
+                <div
+                  style={{
+                    backgroundImage: `url("https://wallpaperaccess.com/full/1099445.png")`,
+                    height: '700px',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  <h2>Signed In</h2>
+                  <button onClick={logOutUser}>Log Out</button>
+                </div>
               </>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
