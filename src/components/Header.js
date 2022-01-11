@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import './Header.css';
 
 export default function Header({ type, setType }) {
   return (
