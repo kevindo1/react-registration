@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import { signInUser } from '../services/users';
+import { signInUser, signUpUser } from '../services/users';
 import AuthForm from '../components/AuthForm';
+import Header from '../components/Header';
 
-export default function SignIn() {
+export default function Auth({ setCurrentUser }) {
+  const [type, setType] = useState('sign in');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -11,8 +13,9 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const resp = await signInUser(email, password);
-      console.log(resp);
+      const resp =
+        type === 'sign in' ? await signInUser(email, password) : await signUpUser(email, password);
+      setCurrentUser(resp);
     } catch {
       setError('Error, try again');
     }
@@ -20,7 +23,7 @@ export default function SignIn() {
 
   return (
     <div>
-      <h1>Hello, welcome to sign in</h1>
+      <Header type={type} setType={setType} />
       <AuthForm
         handleSubmit={handleSubmit}
         email={email}
